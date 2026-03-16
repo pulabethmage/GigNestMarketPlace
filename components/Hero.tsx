@@ -1,4 +1,5 @@
-import GreenButton from "./buttons/GreenButton";
+"use client";
+import GreenButton from "./GreenButton";
 
 export default function Hero() {
   return (
@@ -14,7 +15,10 @@ export default function Hero() {
       </p>
 
       <div className="mt-8 space-x-4">
-        <GreenButton text="Post a Project" />
+        <GreenButton
+          text="Post a Project"
+          onClick={() => alert("Post a Project clicked!")}
+        />
 
         <button className="border px-6 py-3 rounded-lg hover:bg-gray-300 transition duration-200">
           Browse Projects
