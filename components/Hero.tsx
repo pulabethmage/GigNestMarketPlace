@@ -1,3 +1,5 @@
+import GreenButton from "./buttons/GreenButton";
+
 export default function Hero() {
   return (
     <section className="text-center py-24 px-6 bg-green-100">
@@ -12,9 +14,7 @@ export default function Hero() {
       </p>
 
       <div className="mt-8 space-x-4">
-        <button className="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-black transition duration-200">
-          Post a Project
-        </button>
+        <GreenButton text="Post a Project" />
 
         <button className="border px-6 py-3 rounded-lg hover:bg-gray-300 transition duration-200">
           Browse Projects

@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-8 py-4 border-b bg-green-700">
+    <nav className="flex justify-between items-center px-8 py-4  bg-green-700">
       <h1 className="text-2xl font-bold text-white">GigNest</h1>
 
       <div className="space-x-6 hidden md:flex">
