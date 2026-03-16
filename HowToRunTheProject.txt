@@ -1,0 +1,23 @@
+When we need to run the project in the server, for my intance in the DigitalOcean
+01. I Pull the project from the Git Hub
+02. Then I install the npm (Initial Stage)
+03. Then Run the npm run build (It will create the production files)
+04. Next in the PM2 Manager ( Add a new project, as project file type npm, then the select the project directory next input)
+05. Then add the port (By default it is 3000)
+
+Sub Domain Configuration
+In my case i added the new subdomain called gignest.ceynextlk.com
+01. Then for the site directory use the uplaod directory.
+02. Innitially when the project is running smooth on the http://ceynextlk.com:3000
+03. We need to Configure it to gignest.ceynextlk.com -> http://ceynextlk.com:3000
+04. Do this in the /www/server/panel/vhost/apache/gignest.ceynexlk.com.conf
+05. Add the following code 
+    ProxyPreserveHost On
+    ProxyPass / http://127.0.0.1:3000/
+    ProxyPassReverse / http://127.0.0.1:3000/
+
+After doing changes in locally
+01. Push to the main as usual
+02. Pull it in the server
+03. Then run the npm run build
+04. then restart the PM2 project.
